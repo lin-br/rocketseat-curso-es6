@@ -10,5 +10,8 @@
     "babel-loader": "8.0.5",
     "webpack": "4.29.6",
     "webpack-cli": "3.3.0"
+  },
+  "scripts": {
+    "dev": "webpack --mode=development -w"
   }
 }
