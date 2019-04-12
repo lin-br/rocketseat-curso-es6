@@ -1,11 +1,14 @@
 module.exports = {
     // arquivo principal
-    entry: './main.js',
+    entry: './src/main.js',
     // para qual lugar e/ou arquivo que será enviado o código 'compilado'
     output: {
-        path: __dirname,
+        path: __dirname + '/public',
         // nome do arquivo
         filename: "bundle.js",
+    },
+    devServer: {
+        contentBase: __dirname + '/public'
     },
     module: {
         // como o webpack deve ser comportar quando o usuário tentar importar novos arquivos javascript
