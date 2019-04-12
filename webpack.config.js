@@ -1,6 +1,7 @@
 module.exports = {
     // arquivo principal
-    entry: './src/main.js',
+    // entry: './src/main.js',
+    entry: ['@babel/polyfill', './src/async-await.js'],
     // para qual lugar e/ou arquivo que será enviado o código 'compilado'
     output: {
         path: __dirname + '/public',
