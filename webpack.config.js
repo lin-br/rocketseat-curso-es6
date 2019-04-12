@@ -1,14 +1,16 @@
+const path = require('path');
+
 module.exports = {
     // arquivo principal
-    entry: ['@babel/polyfill', './src/main.js'],
+    entry: ['@babel/polyfill', path.join(__dirname, 'src', 'main.js')],
     // para qual lugar e/ou arquivo que será enviado o código 'compilado'
     output: {
-        path: __dirname + '/public',
+        path: path.join(__dirname, 'public'),
         // nome do arquivo
         filename: "bundle.js",
     },
     devServer: {
-        contentBase: __dirname + '/public'
+        contentBase: path.join(__dirname, 'public')
     },
     module: {
         // como o webpack deve ser comportar quando o usuário tentar importar novos arquivos javascript
